@@ -1,0 +1,176 @@
+/* Variables */
+
+$bodyBg: #111;
+$bodyFamily: 'Open sans', -apple-system, -system-ui, helvetica, sans-serif, arial;
+
+$caseBg: rgb(238,238,238) linear-gradient(135deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $bodyBg;
+	font-family: $bodyFamily;
+}
+
+ul, li {
+	list-style: none;
+}
+
+.bg-video {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-color: #111;
+	overflow: hidden;
+
+	video {
+		width: 100%;
+		height: 100%;
+		transform: scale(1.5);
+	}
+}
+
+/* Application */
+
+#app {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 5%;
+	padding: 5%;
+}
+
+.app-title {
+	font-size: 2.5em;
+	color: #fafafa;
+	text-align: center;
+	margin: 3% 0;
+}
+
+.statistics-item {
+	width: 100%;
+	max-width: 350px;
+	padding: 1em;
+	background: $caseBg;
+	border-radius: 10px;
+	margin-bottom: 5%;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	span {
+		display: block;
+	}
+}
+
+.inline-container {
+	span {
+		display: inline-block;
+	}
+}
+
+.continent {
+	font-size: .9em;
+	text-transform: uppercase;
+	color: crimson;
+}
+
+.country {
+	font-size: 2em;
+	font-weight: 600;
+	color: #404040;
+}
+
+.population {
+	margin: 1em 0;
+	text-align: right;
+}
+
+.cases {
+	font-size: 1.5em;
+	color: #111;
+	margin-bottom: .3em;
+}
+
+.cases-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	li {
+		width: 50%;
+		margin-bottom: .3em;
+		font-weight: 600;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.case-active {
+	color: #555555;
+}
+
+.case-critical {
+	color: red;
+}
+
+.case-new {
+	color: orange;
+}
+
+.case-recovered {
+	color: lightgreen;
+}
+
+.case-total {
+	color: #111;
+}
+
+
+
+
+.countries-bad {
+	color: #111;
+	font-size: 1.3em;
+	margin-bottom: .5em;
+	background: $caseBg;
+	padding: 1em;
+	border-radius: 50px;
+	text-align: center;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	#app {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.statistics-item {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: initial;
+	}
+
+	.bg-video {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#app {
+		grid-template-columns: 1fr;
+	}
+}
