@@ -99,4 +99,4 @@ const showCountries = e => {
 	insertData(countries);
 };
 
-connection(URL, ROUTES[1], KEY);
+connection(URL, ROUTES[0], KEY);
