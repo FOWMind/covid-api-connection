@@ -37,7 +37,7 @@ const connection = async (apiUrl, apiRoute = '', apiKey) => {
 		apiRoute == 'countries' ? importantData.map( e => showCountries(e) ) : null;
 
 	} catch {
-		console.warn('Ocurrió un error al solicitar la API.');
+		console.warn('An error ocurred while fetching API.');
 	}
 }
 
