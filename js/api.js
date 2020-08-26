@@ -3,7 +3,7 @@
 const app = document.querySelector('#app');
 
 // Save info that API need
-const KEY = 'deffdcc521mshe45e337efed59e1p1efb93jsn88d313e4315a',
+const KEY = 'YOUR KEY FROM https://rapidapi.com/api-sports/api/covid-193',
 	URL = 'https://covid-193.p.rapidapi.com',
 	ROUTES = [
 		'statistics',
